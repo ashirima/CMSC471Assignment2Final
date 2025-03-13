@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container"> <!-- Centers content and sets max width -->
+        <h1>Where are the Present Fathers?</h1>
+        <br>
+        <h4>In a room of 100 children, evenly distributed across five racial groups (20 children per racial group), 
+            how many have a present father in their lives? Each circle represents a child with an active father present.
+            Hover over the circles in the legend for more insight.</h2>
+            <br>
+
+            <div class="controls">
+                Income: <select id="income" class="variable"></select>
+                Gender: <select id="gender" class="variable"></select>
+            </div>
+
+            <h5 id="avgPresent">On average blank percent of fathers are present in the lives of young blanks at the blank income level</h5>
+
+        <div id="vis"></div> <!--  Will hold our visualization (SVG) -->
+        <div id="tooltip" style="display: none"></div></div>
+
+        <p>Disclaimer: When calculating averages for fathers present in their childrens' lives we floored the values. IE: 97 percent of 20 is 19.4 which would give us 19 circles. See the data used for our visualization here: <a href="https://opportunityinsights.org/data/">National Statistics by Parent Income Percentile, Gender, and Race</a></p>
+    </div>
+    
+    <!-- Load D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+</body>
+</html>
