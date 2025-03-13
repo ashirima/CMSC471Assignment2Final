@@ -1,6 +1,6 @@
 const margin = {top: 20, right: 60, bottom: 200, left: 60};
 const width = 800 - margin.left - margin.right;
-const height = 600 - margin.top - margin.bottom;
+const height = 350 - margin.top - margin.bottom;
 const t = 1000 //1 second for animations
 const delaySpeed = 450;
 
@@ -252,7 +252,7 @@ function addLegend(sampleData) {
     svg.selectAll(".legend-item").remove(); // This will clear previous legend items
     
     let legend = svg.append("g")
-        .attr("transform", `translate(${width / 2 - 300}, ${height})`);
+        .attr("transform", `translate(${width / 2 - 300}, ${height+150})`);
 
     let legendItems = legend.selectAll(".legend-item")
         .data(races)
@@ -310,8 +310,8 @@ function changeTooltip(sampleData, d){
     if(d === maxRaceCount[0]){
         return `${(maxRaceCount[1]/20)*100}% of young ${d.toLowerCase()} ${genderText} in the ${incomeText} income level have a father present`
     } else {
-    return `Young ${d.toLowerCase()} ${genderText} in the ${incomeText} income level have about
-    ${Math.floor(100 - ((sampleData[races.indexOf(d)] / maxRaceCount[1])*100))}% less fathers present than ${maxRaceCount[0].toLowerCase()}
+    return `Young ${d} ${genderText} in the ${incomeText} income level have about
+    ${Math.floor(100 - ((sampleData[races.indexOf(d)] / maxRaceCount[1])*100))}% less fathers present than ${maxRaceCount[0]}
     ${genderText} in the same income level`
     }
 }

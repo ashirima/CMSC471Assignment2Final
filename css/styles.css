@@ -25,6 +25,8 @@ h1{
 
 p{
     font-size: x-small;
+    justify-content: center;
+    text-align: center;
 }
 /* Container styling for layout */
 .container {
